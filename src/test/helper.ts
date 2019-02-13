@@ -13,6 +13,6 @@ export const getDocUri = (p: string) => {
 export const getFile = (fileName: string) =>
   new Promise((resolve, reject) => {
     fs.readFile(getDocPath(fileName), (err, data) => {
-      err ? reject(err) : resolve(data.toString());
+      err ? reject(err) : resolve(data.toString().replace(/\r/g, ''));
     });
   });
