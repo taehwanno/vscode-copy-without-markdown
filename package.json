@@ -2,7 +2,7 @@
   "name": "copy-without-markdown",
   "displayName": "Copy without Markdown",
   "description": "Copy without Markdown for VSCode",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "taehwanno",
   "repository": "https://github.com/taehwanno/vscode-copy-without-markdown",
   "engines": {
