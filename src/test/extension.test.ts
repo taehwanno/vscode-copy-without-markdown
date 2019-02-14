@@ -6,7 +6,10 @@ import { getDocUri, getFile } from './helper';
 describe('Extension Tests', () => {
   it('should copy and convert text when language mode is markdown', async () => {
     const actual = await readClipboardText('markdown-before.md', '');
-    const expected = await getFile('markdown-after.md');
+    let expected = await getFile('markdown-after.md');
+    // remove-markdown remove last line feed(LF).
+    // This is hack for multi platform testing (Mac OS, Windows, Linux).
+    expected = expected.replace(/\n$/, '');
     assert.equal(actual, expected);
   });
 
